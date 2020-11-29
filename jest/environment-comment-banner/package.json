@@ -1,5 +1,6 @@
 {
     "name": "@jest/jest-environment-comment-banner",
+    "version": "0.0.0",
     "private": true,
     "main": "jest_html_reporters.html",
     "scripts": {
