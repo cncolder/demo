@@ -3,6 +3,7 @@
     "private": true,
     "workspaces": [
         "jest/*",
+        "react/*",
         "typescript/*"
     ],
     "husky": {
