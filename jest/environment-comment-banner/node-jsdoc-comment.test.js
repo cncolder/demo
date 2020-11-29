@@ -1,5 +1,5 @@
 /** @jest-environment node */
 
 it('missing document', () => {
-    expect(document).toBeUndefined();
+    expect(() => document).toThrow('document is not defined');
 });
