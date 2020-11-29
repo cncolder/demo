@@ -1,3 +1,4 @@
 {
-    "view": "tests"
+    "template": "node",
+    "view": "terminal"
 }

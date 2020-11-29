@@ -1,11 +1,17 @@
 {
     "name": "@jest/jest-environment-comment-banner",
     "private": true,
+    "main": "jest_html_reporters.html",
     "scripts": {
+        "preserve": "npm run test",
+        "serve": "npx -q http-server -s",
         "test": "jest"
     },
     "dependencies": {
         "@jest/types": "^26.6.2",
-        "jest": "^26.6.3"
+        "jest": "^26.6.3",
+        "jest-html-reporter": "^3.3.0",
+        "jest-html-reporters": "^2.1.1",
+        "jest-stare": "^2.2.0"
     }
 }
