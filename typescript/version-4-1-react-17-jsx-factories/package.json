@@ -1,0 +1,26 @@
+{
+    "name": "@typescript/version-4-1-react-17-jsx-factories",
+    "version": "0.0.0",
+    "private": true,
+    "main": "src/index.tsx",
+    "scripts": {
+        "build": "react-scripts build",
+        "start": "react-scripts start",
+        "test": "react-scripts test --env=jsdom"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "dependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-scripts": "^4.0.1",
+        "typescript": "^4.1.2"
+    }
+}
