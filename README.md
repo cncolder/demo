@@ -3,5 +3,5 @@
 ## Getting Started
 
 ```shell
-npm i
+yarn
 ```
