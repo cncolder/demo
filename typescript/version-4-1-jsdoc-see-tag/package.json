@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "test": "tsc --noEdit"
+        "test": "tsc --noEmit"
     },
     "dependencies": {
         "@tsconfig/recommended": "^1.0.1",
