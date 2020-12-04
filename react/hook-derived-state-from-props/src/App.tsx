@@ -34,7 +34,12 @@ export default () => {
         <div>
             <h1>How do I implement getDerivedStateFromProps?</h1>
 
-            <h3>Current value: {value}</h3>
+            <p>
+                Try typing in "Derived Number Input". Only integers (0-20) trigger the "onChange" event, another value
+                stored in the internal state. If you drag "Controlled Range Input", the value will stay in sync.
+            </p>
+
+            <p>Current value: {value}</p>
 
             <p>
                 <label>
