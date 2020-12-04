@@ -17,7 +17,7 @@ const PrimarySchoolNumberInput: FC<PrimarySchoolNumberInputProps> = (props) => {
 
             const num = Number.parseInt(val);
 
-            if (val === num.toString() && num >= 0 && num <= 10) {
+            if (val === num.toString() && num >= 0 && num <= 20) {
                 props.onChange(num);
             }
         },
@@ -38,11 +38,11 @@ export default () => {
 
             <p>
                 <label>
-                    Controlled Range Input (0-10):
+                    Controlled Range Input (0-20):
                     <input
                         type="range"
                         min="0"
-                        max="10"
+                        max="20"
                         value={value}
                         onChange={(e) => setValue(parseInt(e.target.value, 10))}
                     />
@@ -51,7 +51,7 @@ export default () => {
 
             <p>
                 <label>
-                    Derived Number Input (0-10): <PrimarySchoolNumberInput value={value} onChange={setValue} />
+                    Derived Number Input (0-20): <PrimarySchoolNumberInput value={value} onChange={setValue} />
                 </label>
             </p>
         </div>
