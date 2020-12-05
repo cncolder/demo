@@ -7,7 +7,7 @@
 ```js
 /** @jest-environment node */
 
-/** @jest-environment node */
+/** @jest-environment jsdom */
 ```
 
 The normal comment is invalid ❌
