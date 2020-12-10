@@ -35,7 +35,6 @@ module.exports = {
         ],
     },
     plugins: [
-        isDevelopment && new webpack.HotModuleReplacementPlugin(),
         isDevelopment && new ReactRefreshWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: './index.html',
