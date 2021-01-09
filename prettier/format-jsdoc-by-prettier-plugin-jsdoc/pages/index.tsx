@@ -3,11 +3,7 @@ import useSWR from 'swr';
 
 const sampleCode = `
 /**
- * # Prettier
- *
- * Prettier enforces a consistent code style (i.e. code formatting that won’t affect the AST) across your entire codebase because it disregards the original styling* by parsing it away and re-printing the parsed AST with its own rules that take the maximum line length into account, wrapping code when necessary.
- *
- * ## prettier-plugin-jsdoc
+ * prettier-plugin-jsdoc
  *
  * Prettier plugin for format jsdoc and convert to standard Match with Visual studio and other IDE which support jsdoc. Many good examples of how this plugin work, are in tests directory. Compare tests and their snapshot configured with best practices of jsDoc style guides
  * @examples
