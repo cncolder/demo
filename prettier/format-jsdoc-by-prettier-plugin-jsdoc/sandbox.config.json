@@ -1,3 +1,4 @@
 {
-    "template": "node"
+    "template": "next",
+    "node": "14"
 }
