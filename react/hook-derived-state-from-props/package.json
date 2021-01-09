@@ -1,5 +1,5 @@
 {
-    "name": "@react/hook-derived-state-from-props",
+    "name": "@codemo/hook-derived-state-from-props",
     "version": "0.0.0",
     "private": true,
     "main": "src/index.tsx",

@@ -1,5 +1,5 @@
 {
-    "name": "@webpack/react-refresh-webpack-plugin",
+    "name": "@codemo/react-refresh-webpack-plugin",
     "version": "0.0.0",
     "private": true,
     "main": "src/index.tsx",
