@@ -10,6 +10,8 @@
     },
     "workspaces": [
         "jest/*",
+        "packages/*",
+        "prettier/*",
         "react/*",
         "typescript/*",
         "webpack/*"
@@ -33,7 +35,6 @@
         "lint-staged": "^10.5.3",
         "prettier": "^2.2.1",
         "prettier-plugin-jsdoc": "^0.3.4",
-        "prettier-plugin-organize-imports": "^1.1.1",
         "prettier-plugin-packagejson": "^2.2.9",
         "typescript": "^4.1.3"
     }
