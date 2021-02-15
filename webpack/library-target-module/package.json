@@ -5,7 +5,7 @@
     "main": "src/index.tsx",
     "scripts": {
         "prestart": "webpack && prettier --write dist",
-        "start": "npx -q http-server dist -s"
+        "start": "npx -q http-server dist -e js"
     },
     "browserslist": [
         ">0.2%",
