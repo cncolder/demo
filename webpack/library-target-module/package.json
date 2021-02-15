@@ -4,8 +4,8 @@
     "private": true,
     "main": "src/index.tsx",
     "scripts": {
-        "prestart": "webpack && prettier --write dist",
-        "start": "npx -q http-server dist -o -e js"
+        "prestart": "webpack && prettier --write dist && cp dist/index.js dist/index.html",
+        "start": "npx -q http-server dist"
     },
     "browserslist": [
         ">0.2%",
