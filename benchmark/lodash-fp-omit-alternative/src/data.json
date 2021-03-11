@@ -99,5 +99,77 @@
             "taglib-uri": "cofax.tld",
             "taglib-location": "/WEB-INF/tlds/cofax.tld"
         }
-    }
+    },
+    "paths": [
+        ["web-app.servlet[0]['servlet-name']"],
+        [
+            "web-app.servlet[0]['servlet-name']",
+            "web-app.servlet[0]['servlet-class']",
+            "web-app.servlet[0]['init-param']['configGlossary:installationAt']",
+            "web-app.servlet[0]['init-param']['configGlossary:adminEmail']",
+            "web-app.servlet[0]['init-param']['configGlossary:poweredBy']",
+            "web-app.servlet[0]['init-param']['configGlossary:poweredByIcon']",
+            "web-app.servlet[0]['init-param']['configGlossary:staticPath']",
+            "web-app.servlet[0]['init-param'].templateProcessorClass",
+            "web-app.servlet[0]['init-param'].templateLoaderClass",
+            "web-app.servlet[0]['init-param'].templatePath"
+        ],
+        [
+            "web-app.servlet[0]['servlet-name']",
+            "web-app.servlet[0]['servlet-class']",
+            "web-app.servlet[0]['init-param']['configGlossary:installationAt']",
+            "web-app.servlet[0]['init-param']['configGlossary:adminEmail']",
+            "web-app.servlet[0]['init-param']['configGlossary:poweredBy']",
+            "web-app.servlet[0]['init-param']['configGlossary:poweredByIcon']",
+            "web-app.servlet[0]['init-param']['configGlossary:staticPath']",
+            "web-app.servlet[0]['init-param'].templateProcessorClass",
+            "web-app.servlet[0]['init-param'].templateLoaderClass",
+            "web-app.servlet[0]['init-param'].templatePath",
+
+            "web-app.servlet[0]['init-param'].templateOverridePath",
+            "web-app.servlet[0]['init-param'].defaultListTemplate",
+            "web-app.servlet[0]['init-param'].defaultFileTemplate",
+            "web-app.servlet[0]['init-param'].useJSP",
+            "web-app.servlet[0]['init-param'].jspListTemplate",
+            "web-app.servlet[0]['init-param'].jspFileTemplate",
+            "web-app.servlet[0]['init-param'].cachePackageTagsTrack",
+            "web-app.servlet[0]['init-param'].cachePackageTagsStore",
+            "web-app.servlet[0]['init-param'].cachePackageTagsRefresh",
+            "web-app.servlet[0]['init-param'].cacheTemplatesTrack",
+
+            "web-app.servlet[0]['init-param'].cacheTemplatesStore",
+            "web-app.servlet[0]['init-param'].cacheTemplatesRefresh",
+            "web-app.servlet[0]['init-param'].cachePagesTrack",
+            "web-app.servlet[0]['init-param'].cachePagesStore",
+            "web-app.servlet[0]['init-param'].cachePagesRefresh",
+            "web-app.servlet[0]['init-param'].cachePagesDirtyRead",
+            "web-app.servlet[0]['init-param'].searchEngineListTemplate",
+            "web-app.servlet[0]['init-param'].searchEngineFileTemplate",
+            "web-app.servlet[0]['init-param'].searchEngineRobotsDb",
+            "web-app.servlet[0]['init-param'].useDataStore",
+
+            "web-app.servlet[0]['init-param'].dataStoreClass",
+            "web-app.servlet[0]['init-param'].redirectionClass",
+            "web-app.servlet[0]['init-param'].dataStoreName",
+            "web-app.servlet[0]['init-param'].dataStoreDriver",
+            "web-app.servlet[0]['init-param'].dataStoreUrl",
+            "web-app.servlet[0]['init-param'].dataStoreUser",
+            "web-app.servlet[0]['init-param'].dataStorePassword",
+            "web-app.servlet[0]['init-param'].dataStoreTestQuery",
+            "web-app.servlet[0]['init-param'].dataStoreLogFile",
+            "web-app.servlet[0]['init-param'].dataStoreInitConns",
+
+            "web-app.servlet[1]['servlet-name']",
+            "web-app.servlet[1]['servlet-class']",
+            "web-app.servlet[1]['init-param'].mailHost",
+            "web-app.servlet[1]['init-param'].mailHostOverride",
+            "web-app.servlet[2]['servlet-name']",
+            "web-app.servlet[2]['servlet-class']",
+            "web-app.servlet[3]['servlet-name']",
+            "web-app.servlet[3]['servlet-class']",
+            "web-app.servlet[4]['servlet-name']",
+
+            "invalid.path"
+        ]
+    ]
 }
