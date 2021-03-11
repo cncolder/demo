@@ -1,4 +1,4 @@
-# Lodash fp omit alternate
+# Lodash fp omit alternative
 
 The `lodash/fp/omit` is buggy. When omit with deep nested path with array indexes, the source object get mutated.
 

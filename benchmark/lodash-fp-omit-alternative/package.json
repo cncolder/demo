@@ -1,5 +1,5 @@
 {
-    "name": "@codemo/benchmark-lodash-fp-omit",
+    "name": "@codemo/benchmark-lodash-fp-omit-alternative",
     "version": "0.0.0",
     "private": true,
     "main": "src/index.ts",
