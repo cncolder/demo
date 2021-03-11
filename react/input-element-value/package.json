@@ -1,5 +1,5 @@
 {
-    "name": "@codemo/input-element-value",
+    "name": "@codemo/react-input-element-value",
     "version": "0.0.0",
     "private": true,
     "main": "src/index.tsx",

@@ -1,5 +1,5 @@
 {
-    "name": "@codemo/format-jsdoc-by-prettier-plugin-jsdoc",
+    "name": "@codemo/template-format-jsdoc-by-prettier-plugin-jsdoc",
     "version": "0.0.0",
     "private": true,
     "scripts": {

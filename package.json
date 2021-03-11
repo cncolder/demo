@@ -9,6 +9,7 @@
         "name": "colder"
     },
     "workspaces": [
+        "benchmark/*",
         "jest/*",
         "packages/*",
         "prettier/*",

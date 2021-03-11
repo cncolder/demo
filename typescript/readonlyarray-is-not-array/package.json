@@ -1,5 +1,5 @@
 {
-    "name": "@codemo/readonlyarray-is-not-array",
+    "name": "@codemo/typescript-readonlyarray-is-not-array",
     "version": "0.0.0",
     "private": true,
     "scripts": {

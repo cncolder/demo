@@ -1,5 +1,5 @@
 {
-    "name": "@codemo/library-target-module",
+    "name": "@codemo/webpack-library-target-module",
     "version": "0.0.0",
     "private": true,
     "main": "src/index.tsx",
