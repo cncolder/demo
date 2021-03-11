@@ -2,7 +2,7 @@
     "name": "@codemo/benchmark-lodash-fp-omit-alternative",
     "version": "0.0.0",
     "private": true,
-    "main": "src/index.ts",
+    "main": "index.html",
     "scripts": {
         "build": "parcel build index.html",
         "start": "parcel index.html"
@@ -11,12 +11,13 @@
         "last 2 Chrome versions"
     ],
     "dependencies": {
+        "@babel/core": "7.2.0",
         "@tsconfig/recommended": "^1.0.1",
         "@types/benchmark": "^2.1.0",
         "@types/lodash": "^4.14.168",
         "immer": "^8.0.1",
         "lodash": "^4.17.21",
-        "parcel-bundler": "^1.12.4",
+        "parcel-bundler": "1.6.1",
         "typescript": "^4.2.3"
     }
 }

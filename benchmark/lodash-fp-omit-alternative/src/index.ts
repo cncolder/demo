@@ -7,7 +7,6 @@ import omit from 'lodash/omit';
 
 import Benchmark from './benchmark';
 import example from './example.json';
-import './style.css';
 
 const omitClone = <T extends object>(object: T | null | undefined, ...paths: string[]) => {
     return omit(cloneDeep(object), ...paths);
@@ -183,7 +182,5 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
             log('Fastest is ' + this.filter('fastest').map('name'));
         });
 
-    suite.run({ async: true, queued: true, defer: true, delay: 500 });
-
-    // buttonEl.addEventListener('click', () => suite.run({ async: true, queued: true, defer: true, delay: 500 }));
+    document.getElementById('btn')!.addEventListener('click', () => suite.run({ async: true }));
 })();
