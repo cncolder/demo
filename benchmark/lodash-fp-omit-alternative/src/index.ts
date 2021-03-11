@@ -1,5 +1,5 @@
 import assert from 'assert';
-// import immer from 'immer';
+import immer from 'immer';
 import cloneDeep from 'lodash/cloneDeep';
 import unset from 'lodash/unset';
 import unsetFp from 'lodash/fp/unset';
@@ -35,11 +35,11 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
     }, object);
 };
 
-// const omitImmer = <T extends object>(object: T | null | undefined, ...paths: string[]) => {
-//     return immer(object, (draft) => {
-//         omit(draft, ...paths);
-//     });
-// };
+const omitImmer = <T extends object>(object: T | null | undefined, ...paths: string[]) => {
+    return immer(object, (draft) => {
+        omit(draft, ...paths);
+    });
+};
 
 (function () {
     const jsonString = JSON.stringify(example);
@@ -141,47 +141,48 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
         .add(`omit deep clone (${paths3.length} paths)`, () => {
             omitClone(example, ...paths3);
         })
-        .add(`omit with unset after unset fp (${paths1.length} paths)`, () => {
+        .add(`omit unset+fp/unset (${paths1.length} paths)`, () => {
             omitUnsetAfterUnsetFp(example, ...paths1);
         })
-        .add(`omit with unset after unset fp (${paths2.length} paths)`, () => {
+        .add(`omit unset+fp/unset (${paths2.length} paths)`, () => {
             omitUnsetAfterUnsetFp(example, ...paths2);
         })
-        .add(`omit with unset after unset fp (${paths3.length} paths)`, () => {
+        .add(`omit unset+fp/unset (${paths3.length} paths)`, () => {
             omitUnsetAfterUnsetFp(example, ...paths3);
         })
-        .add(`omit with unset fp (${paths1.length} paths)`, () => {
+        .add(`omit fp/unset (${paths1.length} paths)`, () => {
             omitUnsetFp(example, ...paths1);
         })
-        .add(`omit with unset fp (${paths2.length} paths)`, () => {
+        .add(`omit fp/unset (${paths2.length} paths)`, () => {
             omitUnsetFp(example, ...paths2);
         })
-        .add(`omit with unset fp (${paths3.length} paths)`, () => {
+        .add(`omit fp/unset (${paths3.length} paths)`, () => {
             omitUnsetFp(example, ...paths3);
         })
-        // .add(`omit by immer (${paths1.length} paths)`, () => {
-        //     omitImmer(example, ...paths1);
-        // })
-        // .add(`omit by immer (${paths2.length} paths)`, () => {
-        //     omitImmer(example, ...paths2);
-        // })
-        // .add(`omit by immer (${paths3.length} paths)`, () => {
-        //     omitImmer(example, ...paths3);
-        // })
-        .on('start', function (this: Benchmark.Suite) {
-            log(this.length, 'benchmark cases');
+        .add(`omit with immer (${paths1.length} paths)`, () => {
+            omitImmer(example, ...paths1);
         })
-        .on('cycle', function (event: Benchmark.Event) {
+        .add(`omit with immer (${paths2.length} paths)`, () => {
+            omitImmer(example, ...paths2);
+        })
+        .add(`omit with immer (${paths3.length} paths)`, () => {
+            omitImmer(example, ...paths3);
+        })
+        .on('start', () => {
+            log(suite.length, 'benchmark cases');
+        })
+        .on('cycle', (event: Benchmark.Event) => {
             if ('error' in event.target && event.target['error']) return console.error(event.target['error']);
 
             assert(JSON.stringify(example) === jsonString, `${event.target.name} mutates the original object!`);
 
             log(String(event.target));
         })
-        .on('complete', function (this: Benchmark.Suite) {
-            log('Fastest is ' + this.filter('fastest').map('name'));
+        .on('complete', () => {
+            log('Fastest is ' + suite.filter('fastest').map((c: Benchmark.Target) => c.name));
             buttonEl.disabled = false;
-        });
+        })
+        .run({ async: true });
 
     buttonEl.addEventListener('click', (event) => {
         buttonEl.disabled = true;
