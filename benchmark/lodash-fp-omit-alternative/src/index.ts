@@ -43,8 +43,8 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
 
 (function () {
     const jsonString = JSON.stringify(example);
-    const rootEl = document.getElementById('root')!;
-    const buttonEl = document.getElementById('exec')!;
+    const rootEl = document.getElementById('root') as HTMLDivElement;
+    const buttonEl = document.getElementById('exec') as HTMLButtonElement;
 
     const log = (...messages: any[]) => {
         const code = document.createElement('code');
@@ -180,7 +180,11 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
         })
         .on('complete', function (this: Benchmark.Suite) {
             log('Fastest is ' + this.filter('fastest').map('name'));
+            buttonEl.disabled = false;
         });
 
-    document.getElementById('btn')!.addEventListener('click', () => suite.run({ async: true }));
+    buttonEl.addEventListener('click', (event) => {
+        buttonEl.disabled = true;
+        suite.run({ async: true });
+    });
 })();
