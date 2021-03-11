@@ -1,5 +1,5 @@
 import assert from 'assert';
-import immer from 'immer';
+// import immer from 'immer';
 import cloneDeep from 'lodash/cloneDeep';
 import unset from 'lodash/unset';
 import unsetFp from 'lodash/fp/unset';
@@ -36,15 +36,16 @@ const omitUnsetAfterUnsetFp = <T extends object>(object: T | null | undefined, .
     }, object);
 };
 
-const omitImmer = <T extends object>(object: T | null | undefined, ...paths: string[]) => {
-    return immer(object, (draft) => {
-        omit(draft, ...paths);
-    });
-};
+// const omitImmer = <T extends object>(object: T | null | undefined, ...paths: string[]) => {
+//     return immer(object, (draft) => {
+//         omit(draft, ...paths);
+//     });
+// };
 
 (function () {
     const jsonString = JSON.stringify(example);
-    const rootElement = document.getElementById('root')!;
+    const rootEl = document.getElementById('root')!;
+    const buttonEl = document.getElementById('exec')!;
 
     const log = (...messages: any[]) => {
         const code = document.createElement('code');
@@ -53,7 +54,7 @@ const omitImmer = <T extends object>(object: T | null | undefined, ...paths: str
         const pre = document.createElement('pre');
         pre.appendChild(code);
 
-        rootElement.appendChild(pre);
+        rootEl.appendChild(pre);
     };
 
     const paths1 = ['web-app.servlet[0]["servlet-name"]'];
@@ -129,7 +130,9 @@ const omitImmer = <T extends object>(object: T | null | undefined, ...paths: str
         'invalid.path',
     ];
 
-    new Benchmark.Suite()
+    const suite = new Benchmark.Suite();
+
+    suite
         .add(`omit deep clone (${paths1.length} paths)`, () => {
             omitClone(example, ...paths1);
         })
@@ -157,30 +160,30 @@ const omitImmer = <T extends object>(object: T | null | undefined, ...paths: str
         .add(`omit with unset fp (${paths3.length} paths)`, () => {
             omitUnsetFp(example, ...paths3);
         })
-        .add(`omit by immer (${paths1.length} paths)`, () => {
-            omitImmer(example, ...paths1);
-        })
-        .add(`omit by immer (${paths2.length} paths)`, () => {
-            omitImmer(example, ...paths2);
-        })
-        .add(`omit by immer (${paths3.length} paths)`, () => {
-            omitImmer(example, ...paths3);
-        })
-        .on('start', function (this: Benchmark.Suite, event: Benchmark.Event) {
+        // .add(`omit by immer (${paths1.length} paths)`, () => {
+        //     omitImmer(example, ...paths1);
+        // })
+        // .add(`omit by immer (${paths2.length} paths)`, () => {
+        //     omitImmer(example, ...paths2);
+        // })
+        // .add(`omit by immer (${paths3.length} paths)`, () => {
+        //     omitImmer(example, ...paths3);
+        // })
+        .on('start', function (this: Benchmark.Suite) {
             log(this.length, 'benchmark cases');
         })
-        .on('cycle', (event: Benchmark.Event) => {
+        .on('cycle', function (event: Benchmark.Event) {
             if ('error' in event.target && event.target['error']) return console.error(event.target['error']);
 
             assert(JSON.stringify(example) === jsonString, `${event.target.name} mutates the original object!`);
 
-            const { name = '', hz = 0 } = event.target;
-            const opsPerSec = Math.round(hz).toLocaleString();
+            log(String(event.target));
+        })
+        .on('complete', function (this: Benchmark.Suite) {
+            log('Fastest is ' + this.filter('fastest').map('name'));
+        });
 
-            log(name.padEnd(36, '.'), opsPerSec.padStart(12, ' '), 'ops/s');
-        })
-        .on('complete', () => {
-            log('DONE!');
-        })
-        .run({ async: true });
+    suite.run({ async: true, queued: true, defer: true, delay: 500 });
+
+    // buttonEl.addEventListener('click', () => suite.run({ async: true, queued: true, defer: true, delay: 500 }));
 })();
