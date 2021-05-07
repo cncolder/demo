@@ -1,31 +1,33 @@
-import React, { FC, useRef, useState, useEffect } from 'react';
+import React, { FC, useRef, useMemo, useState, useEffect } from 'react';
 import { render } from 'react-dom';
 
 class Store {
-    constructor() {
-        console.log('Store init');
+    constructor(owner = '') {
+        console.log('Store init by', owner);
     }
 }
 
 const App: FC = () => {
-    const storeRef = useRef(new Store());
+    useRef(new Store('useRef'));
+    useRef(useMemo(() => new Store('useRef + useMemo'), []));
+    useState(new Store('useState'));
+    useState(() => new Store('useState lazy initial state'));
 
-    const prevStoreRef = useRef(storeRef.current);
-    if (prevStoreRef.current !== storeRef.current) {
-        console.log('storeRef current changed');
-    }
-
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        setInterval(() => setCount((prev) => prev + 1), 1000);
-    }, []);
-
+    const count = useTick();
     return (
         <div>
             <div>Count: {count}</div>
         </div>
     );
 };
+
+function useTick() {
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        setInterval(() => setCount((prev) => prev + 1), 1000);
+    }, []);
+
+    return count;
+}
 
 render(<App />, document.getElementById('root'));
