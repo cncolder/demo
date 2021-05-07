@@ -1,0 +1,24 @@
+{
+    "name": "@codemo/react-useref-evalute-initial-value-everytime",
+    "version": "0.0.0",
+    "private": true,
+    "main": "src/index.tsx",
+    "scripts": {
+        "build": "parcel build index.html",
+        "start": "parcel index.html"
+    },
+    "browserslist": [
+        "last 2 Chrome versions"
+    ],
+    "dependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.3",
+        "mobx": "6.0.4",
+        "mobx-react": "7.0.5",
+        "parcel-bundler": "^1.12.5",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "typescript": "^4.2.4"
+    }
+}

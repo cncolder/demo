@@ -11,6 +11,7 @@
     "workspaces": [
         "benchmark/*",
         "jest/*",
+        "mobx/*",
         "packages/*",
         "prettier/*",
         "react/*",
