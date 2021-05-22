@@ -1,43 +1,43 @@
 {
-    "name": "codemo",
-    "private": true,
-    "description": "Colder's Demo Codes",
-    "keywords": [
-        "demo"
-    ],
-    "author": {
-        "name": "colder"
-    },
-    "workspaces": [
-        "benchmark/*",
-        "jest/*",
-        "mobx/*",
-        "packages/*",
-        "prettier/*",
-        "react/*",
-        "typescript/*",
-        "webpack/*"
-    ],
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,json,jsx,ts,tsx,md,html,css}": "prettier --write"
-    },
-    "prettier": {
-        "printWidth": 120,
-        "singleQuote": true
-    },
-    "devDependencies": {
-        "@tsconfig/recommended": "^1.0.1",
-        "http-server": "^0.12.3",
-        "husky": "^4.3.8",
-        "lint-staged": "^10.5.4",
-        "prettier": "^2.2.1",
-        "prettier-plugin-jsdoc": "^0.3.11",
-        "prettier-plugin-packagejson": "^2.2.9",
-        "typescript": "^4.1.5"
+  "name": "codemo",
+  "private": true,
+  "description": "Colder's Demo Codes",
+  "keywords": [
+    "demo"
+  ],
+  "author": {
+    "name": "colder"
+  },
+  "workspaces": [
+    "benchmark/*",
+    "jest/*",
+    "mobx/*",
+    "packages/*",
+    "prettier/*",
+    "react/*",
+    "typescript/*",
+    "webpack/*"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,json,jsx,ts,tsx,md,html,css}": "prettier --write"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "http-server": "^0.12.3",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "prettier-plugin-jsdoc": "^0.3.22",
+    "prettier-plugin-packagejson": "^2.2.11",
+    "typescript": "^4.2.4"
+  }
 }
