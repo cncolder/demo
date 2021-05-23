@@ -1,5 +1,5 @@
 {
   "template": "node",
   "node": "14",
-  "startScript": "serve"
+  "startScript": "start"
 }
