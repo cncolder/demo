@@ -1,4 +1,7 @@
 {
     "template": "next",
-    "node": "14"
+    "node": "14",
+    "container": {
+      "startScript": "serve"
+    }
 }
