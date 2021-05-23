@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prestart": "vite build",
-    "start": "vite preview"
+    "preserve": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@types/react": "^16.14.6",
