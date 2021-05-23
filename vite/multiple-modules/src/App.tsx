@@ -25,11 +25,7 @@ function App() {
         </select>
       </header>
 
-      <main className="App-body">
-        {loading && 'Loading...'}
-
-        {Module && <Module.Page {...Module.data} />}
-      </main>
+      <main className="App-body">{loading ? 'Loading...' : Module && <Module.Page {...Module.data} />}</main>
     </div>
   );
 }
