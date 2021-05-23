@@ -16,6 +16,7 @@
     "prettier/*",
     "react/*",
     "typescript/*",
+    "vite/*",
     "webpack/*"
   ],
   "husky": {
