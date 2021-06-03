@@ -1,0 +1,13 @@
+{
+  "name": "@codemo/www-fieldset-legend-flex-layout",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.tsx",
+  "scripts": {
+    "serve": "npx -q http-server"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "dependencies": {}
+}
