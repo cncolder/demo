@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fieldset legend</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: -apple-system, system-ui;
+      }
+      main {
+        margin: 16px;
+      }
+      fieldset {
+        display: flex;
+        flex-direction: row;
+      }
+      section {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Flexbox/grid layout model does not work on fieldset + legend elements</h1>
+      <code>
+        <pre>
+          /* fieldset > legend */
+          fieldset {
+            display: flex;
+            flex-direction: row;
+          }
+        </pre>
+      </code>
+      <fieldset>
+        <legend>legend</legend>
+        <div>div</div>
+      </fieldset>
+
+      <code>
+        <pre>
+          /* second > legend */
+          section {
+            display: flex;
+            flex-direction: row;
+          }
+        </pre>
+      </code>
+      <section>
+        <legend>legend</legend>
+        <div>div</div>
+      </section>
+
+      <code>
+        <pre>
+          /* fieldset > div */
+          fieldset {
+            display: flex;
+            flex-direction: row;
+          }
+        </pre>
+      </code>
+      <fieldset>
+        <div>legend</div>
+        <div>div</div>
+      </fieldset>
+    </main>
+  </body>
+</html>

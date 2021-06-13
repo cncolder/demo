@@ -1,0 +1,13 @@
+{
+  "name": "@codemo/web-javascript-modules-history",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -q http-server"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "dependencies": {}
+}

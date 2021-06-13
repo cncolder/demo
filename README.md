@@ -12,13 +12,13 @@ yarn
 
 **[sandbox.config.json](https://codesandbox.io/docs/configuration#sandbox-configuration)**
 
--   template https://github.com/codesandbox/codesandbox-importers/blob/92a02120586cc9f70aefb3b0972fe6ed195269bc/packages/types/index.d.ts#L38-L63
+template https://github.com/codesandbox/codesandbox-importers/blob/92a02120586cc9f70aefb3b0972fe6ed195269bc/packages/types/index.d.ts#L38-L63
 
 ## Foldors
 
-### assets
+### prefix
 
--   `index.css` default stylesheet. e.g. `https://raw.githubusercontent.com/cncolder/demo/master/assets/index.css`
+technical category
 
 ### prettier
 
