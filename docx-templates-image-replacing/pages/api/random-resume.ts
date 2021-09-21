@@ -21,7 +21,9 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     extension: path.extname(user.picture.large),
   };
 
-  const template = await fs.promises.readFile('public/resume-template.docx');
+  const template = await fs.promises.readFile(
+    path.resolve(process.cwd(), './public/resume-template.docx')
+  );
   const document = await createReport({
     template,
     data: user,
