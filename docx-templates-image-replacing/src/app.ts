@@ -9,7 +9,7 @@ import createReport from 'docx-templates';
 export const app = new Koa();
 const router = new Router();
 
-const root = (p: string) => path.resolve(process.cwd(), p);
+const root = (p: string) => path.resolve(__dirname, '..', p);
 
 router.get('/api/resume', async (ctx) => {
   const {
@@ -28,7 +28,7 @@ router.get('/api/resume', async (ctx) => {
     extension: path.extname(user.picture.large),
   };
 
-  const template = await fs.promises.readFile(root('assets/resume-template.docx'));
+  const template = await fs.promises.readFile(root('public/resume-template.docx'));
   const document = await createReport({
     template,
     data: user,
@@ -48,6 +48,6 @@ router.get('/api/resume', async (ctx) => {
 });
 
 app
-  .use(Static(root('assets')))
+  .use(Static(root('public')))
   .use(router.routes())
   .use(router.allowedMethods());
