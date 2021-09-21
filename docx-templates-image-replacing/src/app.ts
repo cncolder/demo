@@ -9,7 +9,7 @@ import createReport from 'docx-templates';
 export const app = new Koa();
 const router = new Router();
 
-const root = (p: string) => path.resolve(__dirname, '..', p);
+const root = (p: string) => path.resolve(process.cwd(), p);
 
 router.get('/api/resume', async (ctx) => {
   const {
