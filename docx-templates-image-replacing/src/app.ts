@@ -28,7 +28,7 @@ router.get('/api/resume', async (ctx) => {
     extension: path.extname(user.picture.large),
   };
 
-  const template = await fs.promises.readFile(root('public/resume-template.docx'));
+  const template = await fs.promises.readFile(root('assets/resume-template.docx'));
   const document = await createReport({
     template,
     data: user,
@@ -48,6 +48,6 @@ router.get('/api/resume', async (ctx) => {
 });
 
 app
-  .use(Static(root('public')))
+  .use(Static(root('assets')))
   .use(router.routes())
   .use(router.allowedMethods());
