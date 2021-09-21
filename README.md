@@ -26,24 +26,4 @@ technical category
 
 ### shields
 
-Used by shields.io endpoint. e.g.
-
-[
-![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json)
-](https://githubbox.com/cncolder/demo/tree/main/shields)
-
-```plain
-[
-![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json)
-](https://githubbox.com/cncolder/demo/tree/main/shields)
-```
-
-[
-![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/stackblitz.json)
-](https://stackblitz.com/github/cncolder/demo/tree/main/shields)
-
-```plain
-[
-![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/stackblitz.json)
-](https://stackblitz.com/github/cncolder/demo/tree/main/shields)
-```
+Used by shields.io endpoint. See [shields](./shields/README.md)
