@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "label": "codesandbox",
+  "label": "stackblitz",
   "message": "playground",
   "color": "blue",
-  "namedLogo": "codesandbox",
+  "namedLogo": "chakraui",
   "style": "for-the-badge"
 }
