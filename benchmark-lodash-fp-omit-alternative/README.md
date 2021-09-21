@@ -20,7 +20,7 @@ console.log(res);
 
 ## Test & Benchmark
 
-[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/master/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/master/benchmark-lodash-fp-omit-alternative)
+[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/main/benchmark-lodash-fp-omit-alternative)
 
 ## Links
 

@@ -4,4 +4,4 @@
 
 NO!
 
-[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/master/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/master/mobx-react-hot-loader)
+[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/main/mobx-react-hot-loader)

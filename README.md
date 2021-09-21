@@ -28,4 +28,4 @@ technical category
 
 Used by shields.io endpoint. e.g.
 
-`https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/master/shields/codesandbox.json`
+`https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json`

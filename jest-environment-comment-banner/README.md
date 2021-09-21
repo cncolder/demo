@@ -1,6 +1,6 @@
 # Jest environment comment banner
 
-[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/master/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/master/jest-environment-comment-banner)
+[![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cncolder/demo/main/shields/codesandbox.json)](https://githubbox.com/cncolder/demo/tree/main/jest-environment-comment-banner)
 
 `@jest-environment` must be placed in JSDoc
 
