@@ -3,21 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
+    "@koa/router": "^10.1.1",
     "@tsconfig/recommended": "^1.0.1",
+    "@types/koa": "^2.13.4",
+    "@types/koa-static": "^4.0.2",
+    "@types/koa__router": "^8.0.8",
     "@types/node": "^14.14.20",
-    "@types/react": "^17.0.22",
-    "@types/react-dom": "^17.0.9",
     "axios": "^0.21.4",
     "docx-templates": "^4.8.0",
-    "next": "^11.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.4.3"
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.10",
+    "vite-plugin-node": "^0.0.14"
   }
 }

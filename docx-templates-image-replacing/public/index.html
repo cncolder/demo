@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>docx-templates</title>
+    <style>
+      body {
+        font-family: -apple-system, system-ui;
+      }
+      #root {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .download {
+        color: #f00;
+        font-size: 24px;
+        line-height: 3;
+      }
+      .template {
+        color: #999;
+        font-size: 24px;
+        line-height: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <a class="download" href="/api/resume"> Download random resume </a>
+      <a class="template" href="/resume-template.docx"> View resume template </a>
+    </div>
+  </body>
+</html>

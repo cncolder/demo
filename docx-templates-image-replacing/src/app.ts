@@ -1,10 +1,17 @@
 import fs from 'fs';
 import path from 'path';
-import type { NextApiRequest, NextApiResponse } from 'next';
+import Koa from 'koa';
+import Static from 'koa-static';
+import Router from '@koa/router';
 import axios from 'axios';
 import createReport from 'docx-templates';
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export const app = new Koa();
+const router = new Router();
+
+const root = (p: string) => path.resolve(process.cwd(), p);
+
+router.get('/api/resume', async (ctx) => {
   const {
     data: {
       results: [user],
@@ -21,9 +28,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     extension: path.extname(user.picture.large),
   };
 
-  const template = await fs.promises.readFile(
-    path.resolve(process.cwd(), './public/resume-template.docx')
-  );
+  const template = await fs.promises.readFile(root('public/resume-template.docx'));
   const document = await createReport({
     template,
     data: user,
@@ -32,13 +37,17 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 
   const filename = `${user.name.first}-${user.name.last}.docx`;
 
-  res.status(200);
-  res.setHeader('Content-Length', document.length);
-  res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
-  res.setHeader(
+  ctx.status = 200;
+  ctx.set(
     'Content-Type',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   );
-  res.write(document, 'binary');
-  res.end('', 'binary');
-}
+  ctx.set('Content-Disposition', `attachment; filename=${filename}`);
+  ctx.set('Content-Length', String(document.length));
+  ctx.body = Buffer.from(document);
+});
+
+app
+  .use(Static(root('public')))
+  .use(router.routes())
+  .use(router.allowedMethods());
