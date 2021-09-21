@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "build": "exit 0;",
+    "start": "vite"
   },
   "dependencies": {
     "@koa/router": "^10.1.1",
