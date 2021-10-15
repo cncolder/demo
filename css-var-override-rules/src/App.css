@@ -1,0 +1,21 @@
+.app {
+  margin: 32px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 128px;
+}
+
+.undefined {
+  background-color: var(--bg-undefined, gray);
+}
+
+.default {
+  --bg-default: lightgreen;
+  background-color: var(--bg-default, gray);
+}
