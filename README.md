@@ -4,8 +4,12 @@
 
 ## 🚀 Getting Started
 
+Requirements:
+- Node.js 16+
+- Pnpm 6+
+
 ```shell
-yarn
+pnpm i
 ```
 
 ## Codesandbox
