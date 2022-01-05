@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "eslint": "*",
+    "jest": ">=0",
     "react": "^17",
     "react-dom": ""
   },
   "devDependencies": {
+    "@types/eslint": "*",
+    "@types/jest": ">=0",
     "@types/react": "^17",
     "@types/react-dom": ""
   }
