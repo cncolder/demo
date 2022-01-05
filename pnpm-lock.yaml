@@ -247,31 +247,18 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       typescript: 4.5.4
 
-  pnpm-cannot-update-dev-dependencies-version:
+  pnpm6-update-move-dev-dependencies-with-empty-version:
     specifiers:
-      '@types/react': ^17.0.38
-      '@types/react-dom': ^17.0.11
-      react: ^17.0.2
-      react-dom: ^17.0.2
+      '@types/react': ^17
+      '@types/react-dom': ''
+      react: ^17
+      react-dom: ''
     dependencies:
-      '@types/react-dom': 17.0.11
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
       '@types/react': 17.0.38
-
-  pnpm6-update-bug:
-    specifiers:
-      '@types/react': ^17.0.38
-      '@types/react-dom': ^17.0.11
-      react: ^17.0.2
-      react-dom: ^17.0.2
-    dependencies:
       '@types/react-dom': 17.0.11
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-    devDependencies:
-      '@types/react': 17.0.38
 
   prettier-format-jsdoc-by-prettier-plugin-jsdoc:
     specifiers:

@@ -1,5 +1,5 @@
 {
-  "name": "@codemo/pnpm6-update-bug",
+  "name": "@codemo/pnpm6-update-move-dev-dependencies-with-empty-version",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

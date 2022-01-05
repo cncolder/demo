@@ -1,4 +1,4 @@
-# Pnpm6 update bug
+# Pnpm6 update move devDependencies with empty version
 
 Before `pnpm update`
 
