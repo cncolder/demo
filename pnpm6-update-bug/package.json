@@ -1,0 +1,13 @@
+{
+  "name": "@codemo/pnpm6-update-bug",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17",
+    "react-dom": ""
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-dom": ""
+  }
+}
