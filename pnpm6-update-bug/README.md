@@ -1,4 +1,4 @@
-# Pnpm cannot update devDependencies version
+# Pnpm6 update bug
 
 Before `pnpm update`
 
@@ -29,7 +29,6 @@ After `pnpm update`
     "@types/react-dom": ""
   }
 }
-
 ```
 
 ## Links
