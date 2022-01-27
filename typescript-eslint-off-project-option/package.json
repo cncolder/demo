@@ -1,16 +1,16 @@
 {
-    "name": "@codemo/typescript-eslint-off-project-option",
-    "version": "0.0.0",
-    "private": true,
-    "scripts": {
-        "test": "eslint src/**/*.ts"
-    },
-    "dependencies": {
-        "@tsconfig/recommended": "^1.0.1",
-        "@types/eslint": "*",
-        "@typescript-eslint/eslint-plugin": "^5.10.1",
-        "@typescript-eslint/parser": "^5.10.1",
-        "eslint": "^8.7.0",
-        "typescript": "^4.5.5"
-    }
+  "name": "@codemo/typescript-eslint-off-project-option",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/eslint": "*",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "typescript": "^4.5.5"
+  }
 }
