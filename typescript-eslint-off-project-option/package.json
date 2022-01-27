@@ -3,11 +3,32 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/await-thenable": "error"
+    },
+    "root": true
   },
   "dependencies": {
     "@tsconfig/recommended": "^1.0.1",
-    "@types/eslint": "*",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^8.7.0",
