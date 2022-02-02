@@ -1,0 +1,19 @@
+{
+  "name": "@codemo/webpack-terser-compass-true",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "prestart": "webpack --mode production",
+    "start": "http-server dist -o index.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@types/webpack": "^5.28.0",
+    "babel-loader": "^8.2.3",
+    "http-server": "^14.0.0",
+    "terser-webpack-plugin": "5.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
