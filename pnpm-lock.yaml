@@ -247,6 +247,20 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       typescript: 4.5.4
 
+  parcel2-bug-watch-jsx-default-export:
+    specifiers:
+      '@types/react': ^17.0.0
+      '@types/react-dom': ^17.0.0
+      parcel: 2.6.0
+      react: ^17.0.1
+      react-dom: ^17.0.1
+    dependencies:
+      '@types/react': 17.0.38
+      '@types/react-dom': 17.0.11
+      parcel: 2.6.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+
   pnpm6-update-move-dev-dependencies-with-empty-version:
     specifiers:
       '@types/eslint': '*'
@@ -267,24 +281,6 @@ importers:
       '@types/jest': 27.4.0
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
-
-  pracel2-watch-jsx-export-default:
-    specifiers:
-      '@tsconfig/recommended': ^1.0.1
-      '@types/react': ^17.0.0
-      '@types/react-dom': ^17.0.0
-      parcel: ^2.6.0
-      react: ^17.0.1
-      react-dom: ^17.0.1
-      typescript: ^4.7.3
-    dependencies:
-      '@tsconfig/recommended': 1.0.1
-      '@types/react': 17.0.38
-      '@types/react-dom': 17.0.11
-      parcel: 2.6.0
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      typescript: 4.7.3
 
   prettier-format-jsdoc-by-prettier-plugin-jsdoc:
     specifiers:
@@ -5313,7 +5309,7 @@ packages:
       clone: 2.1.2
       dotenv: 7.0.0
       dotenv-expand: 5.1.0
-      json5: 2.2.0
+      json5: 2.2.1
       msgpackr: 1.6.1
       nullthrows: 1.1.1
       semver: 5.7.1
@@ -8684,7 +8680,7 @@ packages:
     dev: false
 
   /boolbase/1.0.0:
-    resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=}
+    resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: false
 
   /brace-expansion/1.1.11:
@@ -20505,12 +20501,6 @@ packages:
 
   /typescript/4.5.5:
     resolution: {integrity: sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: false
-
-  /typescript/4.7.3:
-    resolution: {integrity: sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false
