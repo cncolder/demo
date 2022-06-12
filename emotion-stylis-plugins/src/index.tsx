@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         margin: 32px;
         color: red;
         font-family: 'monospace';
-        font-size: ${12 * 4}px;
+        font-size: ${12 * 2}px;
       `}
     >
       <div>color: red !important;</div>
