@@ -1,3 +1,9 @@
+# Project
+.DS_Store
+build
+storybook-static
+package-lock.json
+
 # Logs
 logs
 *.log
@@ -114,8 +120,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-# Project
-.DS_Store
-build
-package-lock.json
