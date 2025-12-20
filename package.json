@@ -34,5 +34,5 @@
     "node": "24",
     "pnpm": "10"
   },
-  "packageManager": "pnpm@10"
+  "packageManager": "pnpm@10.0.0"
 }
