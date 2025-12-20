@@ -15,7 +15,6 @@
         "not op_mini all"
     ],
     "dependencies": {
-        "@tsconfig/recommended": "^1.0.1",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "react": "^17.0.1",

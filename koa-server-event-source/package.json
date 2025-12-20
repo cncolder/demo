@@ -13,7 +13,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@tsconfig/recommended": "^1.0.1",
     "@types/koa": "^2.13.3",
     "koa": "^2.13.1",
     "ts-node": "^10.0.0",
