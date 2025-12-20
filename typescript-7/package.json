@@ -3,9 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "prestart": "npm run test",
-        "start": "npx -q http-server dist -s",
-        "test": "tsc --noEmit"
+        "typecheck": "tsgo"
     },
     "dependencies": {
         "@typescript/native-preview": "^7.0.0-dev.20251220.1"
