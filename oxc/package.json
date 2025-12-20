@@ -1,0 +1,13 @@
+{
+    "name": "@codemo/typescript-7",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "prelint": "oxfmt",
+        "lint": "OXC_LOG=debug oxlint"
+    },
+    "devDependencies": {
+        "oxfmt": "^0.19.0",
+        "oxlint": "^1.34.0"
+    }
+}
